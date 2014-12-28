@@ -1,18 +1,22 @@
 
 public class Cell implements Button{
 
-    private boolean isAlive;
+    private boolean alive;
 
-    public Cell(boolean isAlive) {
-        isAlive = false;
+    public Cell() {
+        alive = false;
+    }
+
+    public boolean isAlive(){
+        return alive;
     }
 
     public void press(){
-        setState(!isAlive);
+        setState(!alive);
     }
 
     private void setState(boolean x){
-        isAlive = x;
+        alive = x;
     }
 
 }
